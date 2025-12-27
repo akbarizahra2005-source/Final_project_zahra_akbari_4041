@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up / Sign In</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="right">
+    <h2> Registration form</h2>
+
+    <div class="tabs">
+      <button id="signupTab" class="active">Sign Up</button>
+      <button id="signinTab">Sign In</button>
+    </div>
+
+    <form id="signupForm" class="form active">
+      <label>Username</label>
+      <input type="text" id="suUsername">
+
+      <label>Full Name</label>
+      <input type="text" id="suFullname">
+
+      <label>Email</label>
+      <input type="email" id="suEmail">
+
+      <label>Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="suPassword">
+        <span id="togglePwd" class="toggle">Show</span>
+      </div>
+
+      <div id="pwdRules">
+        <p id="ruleLength" class="rule">❌ Minimum 8 characters</p>
+        <p id="ruleUpper" class="rule">❌ At least one uppercase letter</p>
+        <p id="ruleNumber" class="rule">❌ At least one number</p>
+        <p id="ruleSymbol" class="rule">❌ At least one symbol (!@#$%^&*)</p>
+      </div>
+
+      <button type="submit" id="createAccountBtn" disabled>Create Account</button>
+      <p class="success"></p>
+    </form>
+
+    <form id="signinForm" class="form">
+      <label>Username or Email</label>
+      <input type="text" id="siUser">
+
+      <label>Password</label>
+      <input type="password" id="siPass">
+
+      <button type="submit" id="loginBtn" disabled>Login</button>
+      <p class="success"></p>
+    </form>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

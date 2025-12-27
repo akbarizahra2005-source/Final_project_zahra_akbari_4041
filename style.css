@@ -1,0 +1,93 @@
+* { box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+body {
+    background: url('images/02.jpg')center/cover no-repeat fixed;
+    padding:0; 
+}
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background: rgb(255, 255, 255);
+    border-radius: 12px; 
+    padding: 20px;
+}
+.tabs { 
+    display: flex;
+    margin-bottom: 20px;
+}
+.tabs button { flex:1; 
+    padding:10px; 
+    cursor:pointer; 
+    border:none;
+    background:#eee; 
+}
+.tabs button.active {
+    background:#35c9ff;
+    color:white; 
+}
+.form {
+     display: none;
+}
+.form.active {
+     display:block;
+}
+label {
+     font-size: 13px; 
+     display:block;
+      margin-top:10px;
+}
+input { 
+    width:100%; 
+    padding:10px;
+     margin-top:4px;
+      border:1px solid #ccc; 
+      border-radius:6px;
+}
+.password-wrapper {
+     position: relative; 
+    }
+.toggle { 
+    position: absolute;
+     right: 10px; 
+     top: 50%;
+      transform: translateY(-50%); 
+      font-size:12px; 
+      color:#000000; 
+      cursor:pointer; 
+}
+button {
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:6px; 
+    background:#17dbdb;
+    color:white;
+    cursor:pointer;
+}
+button:disabled {
+    background:#aaa;
+    cursor:not-allowed;
+    }
+.success { 
+    color:green;
+    font-size:13px;
+    margin-top:10px;
+    }
+#pwdRules { 
+    margin-top:6px;
+    font-size:12px;
+    }
+.rule { 
+    margin:2px 0;   
+}
+.rule.correct { 
+    color:green;
+}
+.rule.incorrect { 
+    color:red; 
+}
+.rule.partial { 
+    color:orange; 
+}
