@@ -4,7 +4,7 @@
 **زهرا اکبری**  
 
 ## لینک زنده پروژه
-[مشاهده صفحه زنده](https://final-project-zahra-akbari-4041.vercel.app/)
+[مشاهده صفحه](https://final-project-zahra-akbari-4041.vercel.app/)
 
 ## توضیح پروژه
 این پروژه یک صفحه ورود و ثبت‌نام حرفه‌ای با طراحی مدرن و کاملاً responsive است که فقط با **HTML، CSS و JavaScript خالص** ساخته شده.
