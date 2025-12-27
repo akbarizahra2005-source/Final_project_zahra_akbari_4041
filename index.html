@@ -15,7 +15,7 @@
         --primary-dark: #4f46e5;
         --border: #e5e7eb;
         --bg: #f9fafb;
-        --radius: 32px;
+        --radius: 28px;
         --success: #10b981;
         --error: #ef4444;
         --neutral: #6b7280;
@@ -34,24 +34,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 20px;
       }
 
       .container {
-        width: 1400px;
-        max-width: 96%;
-        height: 820px;
+        width: 1100px;
+        max-width: 95%;
+        height: 700px;
         background: #fff;
         border-radius: var(--radius);
         display: flex;
         overflow: hidden;
-        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
       }
 
-      /* LEFT */
       .left-panel {
         flex: 1;
         background: linear-gradient(135deg, #1e40af, #3b82f6);
-        padding: 100px 80px;
+        padding: 60px 50px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -59,57 +59,58 @@
       }
 
       .left-panel h1 {
-        font-size: 46px;
+        font-size: 38px;
         font-weight: 700;
+        line-height: 1.2;
       }
       .left-panel p {
-        font-size: 20px;
-        margin-top: 14px;
+        font-size: 18px;
+        margin-top: 12px;
         opacity: 0.95;
       }
 
       .left-panel h2 {
-        font-size: 40px;
+        font-size: 34px;
         font-weight: 700;
       }
       .left-panel .bottom p {
-        font-size: 20px;
-        margin-top: 14px;
+        font-size: 18px;
+        margin-top: 12px;
       }
 
-      /* RIGHT */
       .right-panel {
-        flex: 1.15;
-        padding: 60px 90px;
+        flex: 1.1;
+        padding: 50px 60px;
         background: var(--bg);
       }
 
       .logo {
         display: flex;
         align-items: center;
-        font-size: 34px;
+        font-size: 30px;
         font-weight: 700;
         color: var(--primary);
-        margin-bottom: 24px;
+        margin-bottom: 20px;
       }
 
       .logo::before {
         content: "▶";
-        margin-right: 14px;
+        margin-right: 12px;
+        font-size: 32px;
       }
 
       .tabs {
         display: flex;
-        gap: 24px;
-        margin-bottom: 32px;
+        gap: 20px;
+        margin-bottom: 28px;
       }
 
       .tab {
-        padding: 14px 44px;
-        border-radius: 28px;
+        padding: 12px 36px;
+        border-radius: 24px;
         font-weight: 600;
         cursor: pointer;
-        font-size: 17px;
+        font-size: 16px;
       }
 
       .tab.active {
@@ -128,17 +129,17 @@
       label {
         display: block;
         margin-bottom: 6px;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 600;
         color: #374151;
       }
 
       input {
         width: 100%;
-        padding: 16px 20px;
+        padding: 14px 18px;
         border: 1px solid var(--border);
-        border-radius: 14px;
-        font-size: 16px;
+        border-radius: 12px;
+        font-size: 15px;
       }
 
       .input-wrapper {
@@ -147,7 +148,7 @@
 
       .toggle-password {
         position: absolute;
-        right: 16px;
+        right: 14px;
         top: 50%;
         transform: translateY(-50%);
         border: none;
@@ -155,18 +156,18 @@
         color: var(--primary);
         font-weight: 600;
         cursor: pointer;
+        font-size: 14px;
       }
 
-      /* PASSWORD RULES */
       .password-rules {
-        margin-top: 10px;
+        margin-top: 8px;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 6px;
       }
 
       .rule {
-        font-size: 14px;
+        font-size: 13px;
         color: var(--neutral);
         display: flex;
         align-items: center;
@@ -174,46 +175,61 @@
 
       .rule::before {
         content: "✓";
-        margin-right: 10px;
-        color: var(--neutral);
+        margin-right: 8px;
+        font-size: 14px;
       }
 
       .rule.valid {
         color: var(--success);
       }
-
       .rule.valid::before {
         color: var(--success);
       }
-
       .rule.invalid {
         color: var(--error);
       }
-
       .rule.invalid::before {
         color: var(--error);
       }
 
-      /* BUTTON */
       .submit {
-        margin-top: 22px;
+        margin-top: 6px;
         width: 100%;
-        padding: 20px;
+        padding: 18px;
         background: var(--primary);
         border: none;
-        border-radius: 36px;
+        border-radius: 32px;
         color: #fff;
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 600;
         cursor: pointer;
       }
 
       .success {
-        margin-top: 16px;
+        margin-top: 14px;
         text-align: center;
         color: var(--success);
         font-weight: 600;
         display: none;
+      }
+
+      @media (max-width: 992px) {
+        .container {
+          flex-direction: column;
+          height: auto;
+          max-height: 90vh;
+        }
+        .left-panel {
+          padding: 50px 40px;
+          justify-content: center;
+          text-align: center;
+        }
+        .left-panel .bottom {
+          display: none;
+        }
+        .right-panel {
+          padding: 40px;
+        }
       }
     </style>
   </head>
@@ -240,18 +256,15 @@
         </div>
 
         <form id="form">
-          <!-- Sign Up -->
           <div id="signup-form">
             <div class="form-group">
               <label>Username</label>
               <input placeholder="Pick a username" />
             </div>
-
             <div class="form-group">
               <label>Full Name</label>
               <input id="name" placeholder="Enter your name" />
             </div>
-
             <div class="form-group">
               <label>Email</label>
               <input
@@ -260,7 +273,6 @@
                 placeholder="Enter your email address"
               />
             </div>
-
             <div class="form-group">
               <label>Password</label>
               <div class="input-wrapper">
@@ -271,7 +283,6 @@
                 />
                 <button type="button" class="toggle-password">Show</button>
               </div>
-
               <div class="password-rules">
                 <div class="rule" id="len">At least 8 characters</div>
                 <div class="rule" id="upper">Contains an uppercase letter</div>
@@ -279,14 +290,12 @@
                 <div class="rule" id="symbol">Contains a symbol (!@#$%^&*)</div>
               </div>
             </div>
-
             <button type="submit" class="submit">Create Account</button>
             <div class="success" id="success">
               Account Created Successfully!
             </div>
           </div>
 
-          <!-- Sign In -->
           <div id="signin-form" style="display: none">
             <div class="form-group">
               <label>Username</label>
@@ -325,8 +334,7 @@
               el.classList.add("invalid");
               el.classList.remove("valid");
             } else {
-              el.classList.remove("valid");
-              el.classList.remove("invalid");
+              el.classList.remove("valid", "invalid");
             }
           });
         });
@@ -337,14 +345,18 @@
         const ok = pass
           ? Object.values(rules).every((fn) => fn(pass.value))
           : true;
-        if (document.getElementById("signup-form").style.display !== "none") {
-          if (ok) success.style.display = "block";
-        } else {
-          alert("Logged in!"); // میتونی با عملکرد واقعی جایگزین کنی
+        if (
+          document.getElementById("signup-form").style.display !== "none" &&
+          ok
+        ) {
+          success.style.display = "block";
+        } else if (
+          document.getElementById("signin-form").style.display !== "none"
+        ) {
+          alert("Logged in!");
         }
       };
 
-      // Toggle Password
       document.querySelectorAll(".toggle-password").forEach((btn) => {
         btn.onclick = (e) => {
           const i = e.target.previousElementSibling;
@@ -353,7 +365,6 @@
         };
       });
 
-      // Tab switch
       const signupTab = document.getElementById("signup-tab");
       const signinTab = document.getElementById("signin-tab");
       const signupForm = document.getElementById("signup-form");
